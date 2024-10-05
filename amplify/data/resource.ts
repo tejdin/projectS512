@@ -14,7 +14,7 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
-    Table: a.model({
+    Tables: a.model({
       id : a.string(),
       size : a.integer(),
       istaken: a.boolean(),
@@ -28,7 +28,7 @@ const schema = a.schema({
     }).authorization((allow) => [allow.publicApiKey()]),    
 });
 
-export type Schema = ClientSchema<typeof schema>;
+export type Shcema = ClientSchema<typeof schema>;
 
 export const data = defineData({
   schema,
